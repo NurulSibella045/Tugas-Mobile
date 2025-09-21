@@ -1,21 +1,15 @@
-import 'dart:io';
-
 void main() {
-  stdout.write("Masukkan umur: ");
-  int umur = int.parse(stdin.readLineSync()!);
+  // Panjang dan lebar dimasukkan langsung melalui variabel
+  double panjang = 10;
+  double lebar = 5;
 
-  String kategori;
-  if (umur >= 0 && umur <= 12) {
-    kategori = "Anak-anak";
-  } else if (umur >= 13 && umur <= 17) {
-    kategori = "Remaja";
-  } else if (umur >= 18 && umur <= 59) {
-    kategori = "Dewasa";
-  } else if (umur >= 60) {
-    kategori = "Lansia";
-  } else {
-    kategori = "Umur tidak valid";
-  }
+  // Hitung luas dan keliling
+  double luas = panjang * lebar;
+  double keliling = 2 * (panjang + lebar);
 
-  print("Anda termasuk kategori $kategori");
+  // Tampilkan hasil dengan format rapi (bilangan bulat)
+  print("Panjang = ${panjang.toInt()}");
+  print("Lebar = ${lebar.toInt()}");
+  print("Luas = ${luas.toInt()}");
+  print("Keliling = ${keliling.toInt()}");
 }
